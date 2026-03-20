@@ -202,6 +202,7 @@ main {
 
 .inputsContainer__input input {
     border: none;
+    outline: none;
     height: 7.7rem;
     width: 17.3rem;
 }
