@@ -1,0 +1,40 @@
+:root{
+    
+    --text-preset-1-font-size: 6.4rem;
+    --text-preset-1-font-weight: 600;
+    --text-preset-1-line-height: 110%;
+    --text-preset-1-letter-spacing: -5%;
+
+    --text-preset-2-font-size: 4.8rem;
+    --text-preset-2-font-weight: 600;
+    --text-preset-2-line-height: 110%;
+    --text-preset-2-letter-spacing: -5%;
+    
+    --text-preset-3-font-size: 32rem;
+    --text-preset-3-font-weight: 600;
+    --text-preset-3-line-height: 110%;
+    --text-preset-3-letter-spacing: -5%;
+    
+    --text-preset-4-font-size: 2.4rem;
+    --text-preset-4-font-weight: 600;
+    --text-preset-4-line-height: 120%;
+    --text-preset-4-letter-spacing: -5%;
+
+    --text-preset-5-font-size: 2rem;
+    --text-preset-5-font-weight: 600;
+    --text-preset-5-line-height: 120%;
+    --text-preset-5-letter-spacing: -5%;
+
+    --text-preset-6-font-size: 1.6rem;
+    --text-preset-6-font-weight-regular: 400;
+    --text-preset-6-font-weight-semibold: 600;
+    --text-preset-6-line-height: 150%;
+    --text-preset-6-letter-spacing: 0;
+
+    --text-preset-7-font-size: 1.4rem;
+    --text-preset-7-font-weight-regular: 400;
+    --text-preset-7-font-weight-bold: 700;
+    --text-preset-7-line-height: 150%;
+    --text-preset-7-letter-spacing: 0;
+
+}
