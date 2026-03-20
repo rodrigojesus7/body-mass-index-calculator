@@ -37,4 +37,21 @@
     --text-preset-7-line-height: 150%;
     --text-preset-7-letter-spacing: 0;
 
+
+    --title-color: #253347;
+    --text-color: #5E6E85;
+
+    --input-text-color: #253347;
+    --input-border-color: #5E6E85;
+
+    --unity-text-color: #253347;
+
+    --radio-background-color: #E1E7FE;
+    --highlight-color: #345FF6;
+
+    --eating-background-color: #FCDDED;
+    --exercise-background-color: #FDEFE1;
+    --sleep-background-color: #DDF6F6;
+
+    --shadow: #8FAECF40
 }
