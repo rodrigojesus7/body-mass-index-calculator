@@ -286,3 +286,9 @@ main {
 .resultContainer__detailText--highlight{
     font-weight: var(--text-preset-7-font-weight-bold);
 }
+
+
+img{
+    width: 37.5rem;
+    height: 35.439rem;
+}
