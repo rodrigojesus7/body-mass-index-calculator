@@ -187,7 +187,7 @@ main {
     gap: 1.6rem;
 }
 
-.inputsContainer__container{
+.inputsContainer__container {
     display: flex;
     flex-direction: column;
 
@@ -213,7 +213,7 @@ main {
 }
 
 
-.inputsContainer__label{
+.inputsContainer__label {
     font-size: var(--text-preset-7-font-size);
     font-weight: var(--text-preset-7-font-weight-regular);
     line-height: var(--text-preset-7-line-height);
@@ -222,7 +222,7 @@ main {
     color: var(--text-color);
 }
 
-.inputsContainer__data{
+.inputsContainer__data {
     font-size: var(--text-preset-4-font-size);
     font-weight: var(--text-preset-4-font-weight);
     line-height: var(--text-preset-4-line-height);
@@ -231,7 +231,7 @@ main {
     color: var(--highlight-color);
 }
 
-.input{
+.input {
     font-size: var(--text-preset-4-font-size);
     font-weight: var(--text-preset-4-font-weight);
     line-height: var(--text-preset-4-line-height);
@@ -241,7 +241,7 @@ main {
 }
 
 
-.calculationContanier__resultContainer{
+.calculationContanier__resultContainer {
     display: flex;
     flex-direction: column;
 
@@ -254,14 +254,14 @@ main {
     background-color: var(--highlight-color);
 }
 
-.resultContainer__textContainer{
+.resultContainer__textContainer {
     display: flex;
     flex-direction: column;
 
     gap: 0.8rem;
 }
 
-.resultContainer__text{
+.resultContainer__text {
     font-size: var(--text-preset-6-font-size);
     font-weight: var(--text-preset-6-font-weight-semibold);
     line-height: var(--text-preset-6-line-height);
@@ -270,7 +270,7 @@ main {
     color: var(--result-text-color);
 }
 
-.resultContainer__bmiNumber{
+.resultContainer__bmiNumber {
     font-size: var(--text-preset-2-font-size);
     font-weight: var(--text-preset-2-font-weight);
     line-height: var(--text-preset-2-line-height);
@@ -279,7 +279,7 @@ main {
     color: var(--result-text-color);
 }
 
-.resultContainer__detailText{
+.resultContainer__detailText {
     font-size: var(--text-preset-7-font-size);
     font-weight: var(--text-preset-7-font-weight-regular);
     line-height: var(--text-preset-7-line-height);
@@ -288,22 +288,22 @@ main {
     color: var(--result-text-color);
 }
 
-.resultContainer__detailText--highlight{
+.resultContainer__detailText--highlight {
     font-weight: var(--text-preset-7-font-weight-bold);
 }
 
-.resultDetailSection{
+.resultDetailSection {
     display: flex;
     flex-direction: column;
 
     gap: 4.8rem;
 }
 
-img{
+img {
     max-width: 100%;
 }
 
-.resultDetailSection__articleContainer{
+.resultDetailSection__articleContainer {
     display: flex;
     flex-direction: column;
 
@@ -312,7 +312,7 @@ img{
     gap: 3.2rem;
 }
 
-.resultDetailSection__articleContainer__title{
+.resultDetailSection__articleContainer__title {
     font-size: var(--text-preset-3-font-size);
     font-weight: var(--text-preset-3-font-weight);
     line-height: var(--text-preset-3-line-height);
@@ -321,7 +321,7 @@ img{
     color: var(--title-color);
 }
 
-.resultDetailSection__articleContainer__text{
+.resultDetailSection__articleContainer__text {
     font-size: var(--text-preset-6-font-size);
     font-weight: var(--text-preset-6-font-weight-regular);
     line-height: var(--text-preset-6-line-height);
@@ -333,7 +333,7 @@ img{
 }
 
 
-.recommendationSection{
+.recommendationSection {
     display: flex;
     flex-direction: column;
 
@@ -345,21 +345,21 @@ img{
 
 }
 
-.recommendationSection__articleContainer{
+.recommendationSection__articleContainer {
     display: flex;
     flex-direction: column;
 
     gap: 3.2rem;
 }
 
-.recommendationSection__articleContainer__textContainer{
+.recommendationSection__articleContainer__textContainer {
     display: flex;
     flex-direction: column;
 
     gap: 2.4rem;
 }
 
-.recommendationSection__articleContainer__textContainer__title{
+.recommendationSection__articleContainer__textContainer__title {
     font-size: var(--text-preset-4-font-size);
     font-weight: var(--text-preset-4-font-weight);
     line-height: var(--text-preset-4-line-height);
@@ -370,7 +370,132 @@ img{
     text-align: left;
 }
 
-.recommendationSection__articleContainer__textContainer__text{
+.recommendationSection__articleContainer__textContainer__text {
+    font-size: var(--text-preset-6-font-size);
+    font-weight: var(--text-preset-6-font-weight-regular);
+    line-height: var(--text-preset-6-line-height);
+    letter-spacing: var(--text-preset-6-letter-spacing);
+
+    color: var(--text-color);
+
+    text-align: left;
+}
+
+
+
+
+.limitationSection {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    grid-template-rows: repeat(6, auto);
+
+    grid-template-areas:
+        'intro'
+        'gender'
+        'age'
+        'muscle'
+        'pregnancy'
+        'race'
+    ;
+
+    padding: 8.2rem 2.9rem 9.6rem 1.9rem;
+
+    gap: 1.6rem;
+}
+
+.intro {
+    grid-area: intro;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 3.2rem;
+
+    margin-bottom: 4rem;
+}
+
+.intro__title {
+    font-size: var(--text-preset-3-font-size);
+    font-weight: var(--text-preset-3-font-weight);
+    line-height: var(--text-preset-3-line-height);
+    letter-spacing: var(--text-preset-3-letter-spacing);
+
+    color: var(--title-color);
+
+    text-align: center;
+}
+
+.intro__text {
+    font-size: var(--text-preset-6-font-size);
+    font-weight: var(--text-preset-6-font-weight-regular);
+    line-height: var(--text-preset-6-line-height);
+    letter-spacing: var(--text-preset-6-letter-spacing);
+
+    color: var(--text-color);
+
+    text-align: center;
+}
+
+.gender,
+.age,
+.muscle,
+.pregnancy,
+.race {
+    display: flex;
+    flex-direction: column;
+
+    gap: 1.6rem;
+
+    padding: 2.4rem;
+
+    box-shadow: 1.6rem 3.2rem 5.6rem var(--shadow);
+
+    border-radius: 1.6rem;
+
+    background-color: var(--card-background-color);
+}
+
+.gender {
+    grid-area: gender;
+}
+
+.age {
+    grid-area: age;
+}
+
+.muscle {
+    grid-area: muscle;
+}
+
+.pregnancy {
+    grid-area: pregnancy;
+}
+
+.race {
+    grid-area: race;
+}
+
+.limitationSection__limitationContainer{
+    display: flex;
+    align-items: center;
+
+    gap: 1.6rem;
+}
+
+.limitationSection__limitationTitle{
+    font-size: var(--text-preset-5-font-size);
+    font-weight: var(--text-preset-5-font-weight);
+    line-height: var(--text-preset-5-line-height);
+    letter-spacing: var(--text-preset-5-letter-spacing);
+
+    color: var(--title-color);
+
+    text-align: left;
+}
+
+.limitationSection__limitationText{
     font-size: var(--text-preset-6-font-size);
     font-weight: var(--text-preset-6-font-weight-regular);
     line-height: var(--text-preset-6-line-height);
