@@ -14,7 +14,7 @@ input.forEach(input => {
 
             let fixedResult = result.toFixed(1) 
 
-            bmi.textContent = `${fixedResult}`
+            bmi.textContent = fixedResult
 
         }
 
