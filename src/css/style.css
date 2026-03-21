@@ -203,6 +203,16 @@ main {
 
     border: solid 0.1rem var(--input-border-color);
     border-radius: 1.2rem;
+
+    cursor: pointer;
+}
+
+.inputsContainer__input:hover{
+    border: solid 0.1rem var(--highlight-color);
+}
+
+.inputsContainer__input:focus-within{
+    border: solid 0.1rem var(--highlight-color);
 }
 
 .inputsContainer__input input {
@@ -238,12 +248,16 @@ main {
     letter-spacing: var(--text-preset-4-letter-spacing);
 
     color: var(--input-text-color);
+
+    cursor: pointer;
 }
 
 
 .calculationContanier__resultContainer {
     display: flex;
     flex-direction: column;
+
+    max-width: 32.9rem;
 
     padding: 3.2rem;
 
@@ -259,6 +273,28 @@ main {
     flex-direction: column;
 
     gap: 0.8rem;
+}
+
+.resultContainer__welcomeText{
+    font-size: var(--text-preset-4-font-size);
+    font-weight: var(--text-preset-4-font-weight);
+    line-height: var(--text-preset-4-line-height);
+    letter-spacing: var(--text-preset-4-letter-spacing);
+
+    color: var(--result-text-color);
+
+    text-align: left;
+}
+
+.resultContainer__welcomeInstructionText{
+    font-size: var(--text-preset-7-font-size);
+    font-weight: var(--text-preset-7-font-weight-regular);
+    line-height: var(--text-preset-7-line-height);
+    letter-spacing: var(--text-preset-7-letter-spacing);
+
+    color: var(--result-text-color);
+
+    text-align: left;
 }
 
 .resultContainer__text {
@@ -277,6 +313,8 @@ main {
     letter-spacing: var(--text-preset-2-letter-spacing);
 
     color: var(--result-text-color);
+
+    overflow: hidden;
 }
 
 .resultContainer__detailText {
@@ -504,4 +542,10 @@ img {
     color: var(--text-color);
 
     text-align: left;
+}
+
+
+
+.hidden{
+    display: none;
 }

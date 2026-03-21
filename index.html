@@ -14,9 +14,9 @@
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="./src/css/reset.css?v=1.2">
-    <link rel="stylesheet" href="./src/css/style.css?v=1.2">
-    <link rel="stylesheet" href="./src/css/responsive.css?v=1.2">
+    <link rel="stylesheet" href="./src/css/reset.css?v=1.3">
+    <link rel="stylesheet" href="./src/css/style.css?v=1.3">
+    <link rel="stylesheet" href="./src/css/responsive.css?v=1.3">
 
 </head>
 
@@ -46,7 +46,7 @@
 
                     <div class="calculationContainer__radioContainer">
                         <div>
-                            <input type="radio" name="unity" id="metric">
+                            <input type="radio" name="unity" id="metric" checked>
                             <label class="calculationContainer__radioLabel" for="metric">Metric</label>
                         </div>
                         <div>
@@ -57,17 +57,17 @@
 
                     <div class="calculationContainer__inputsContainer">
                         <div class="inputsContainer__container">
-                            <label class="inputsContainer__label" for="">Height</label>
+                            <label class="inputsContainer__label" for="height">Height</label>
                             <div class="inputsContainer__input">
-                                <input class="input height" type="number">
+                                <input class="input height" type="number" placeholder="0" id="height">
                                 <p class="inputsContainer__data">cm</p>
                             </div>
                         </div>
 
                         <div class="inputsContainer__container">
-                            <label class="inputsContainer__label" for="">Weight</label>
+                            <label class="inputsContainer__label" for="weight">Weight</label>
                             <div class="inputsContainer__input">
-                                <input class="input weight" type="number">
+                                <input class="input weight" type="number" placeholder="0" id="weight">
                                 <p class="inputsContainer__data">kg</p>
                             </div>
                         </div>
@@ -75,11 +75,13 @@
 
                     <div class="calculationContanier__resultContainer">
                         <div class="resultContainer__textContainer">
-                            <p class="resultContainer__text">Your BMI is...</p>
-                            <p class="resultContainer__bmiNumber">23.4</p>
+                            <p class="resultContainer__welcomeText">Welcome!</p>
+                            <p class="resultContainer__welcomeInstructionText">Enter your height and weight and you’ll see your BMI result here</p>
+                            <p class="resultContainer__text hidden">Your BMI is...</p>
+                            <p class="resultContainer__bmiNumber hidden">23.4</p>
                         </div>
 
-                        <p class="resultContainer__detailText">Your BMI suggests you’re a healthy weight. Your ideal
+                        <p class="resultContainer__detailText hidden">Your BMI suggests you’re a healthy weight. Your ideal
                             weight is between <span class="resultContainer__detailText--highlight">63.3kgs
                                 -
                                 85.2kgs.</span></p>
