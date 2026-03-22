@@ -144,3 +144,33 @@
 
 
 }
+
+
+
+@media (min-width: 64rem){
+
+    .calculatorSection__text{
+        width: 68.6rem;
+    }
+
+        .resultDetailSection {
+        display: flex;
+        flex-direction: row;
+
+            justify-content: center;
+        align-items: center;
+
+        gap: 7.2rem;
+
+        padding-right: 0;
+        padding-bottom: 5rem;
+    }
+
+    .recommendationSection {
+        padding: 5rem 12.8rem;
+    }
+
+    .limitationSection {
+        padding: 10.4rem 14.4rem;
+    }
+}
