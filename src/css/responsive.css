@@ -1,0 +1,146 @@
+@media (min-width: 48rem) {
+
+    .gradient {
+
+        height: 58rem;
+    }
+
+    .calculatorSection {
+
+        padding: 3.2rem 4rem 8.8rem 4rem;
+
+        gap: 4rem;
+    }
+
+    .calculatorSection__calculationContanier {
+
+        width: 68.6rem;
+
+        padding: 3.2rem;
+
+        gap: 3.2rem;
+    }
+
+    .calculationContainer__inputsContainer {
+        display: flex;
+        flex-direction: row;
+
+        justify-content: space-between;
+
+        gap: 2.4rem;
+    }
+
+    .inputsContainer__input {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        width: 29.9rem;
+    }
+
+    .inputsContainer__input input {
+        width: 19.2rem;
+    }
+
+    .calculationContainer__radioContainer {
+        padding-right: 18.9rem;
+    }
+
+    .calculationContanier__resultContainer {
+
+        flex-direction: row;
+
+        align-items: center;
+
+        max-width: 62.2rem;
+
+        padding: 3.2rem;
+
+        border-radius: 16rem 99.9rem 99.9rem 16rem;
+
+        gap: 2.4rem;
+
+        background-color: var(--highlight-color);
+    }
+
+    .resultContainer__textContainer {
+        min-width: 26.7rem;
+    }
+
+    .resultContainer__welcomeText {
+        margin-bottom: 0.8rem;
+    }
+
+    img {
+        width: 30rem;
+        height: 28rem;
+    }
+
+
+    .resultDetailSection {
+        display: flex;
+        flex-direction: row;
+
+        align-items: center;
+
+        gap: 7.2rem;
+
+        padding-right: 4.5rem;
+        padding-bottom: 5rem;
+    }
+
+    .resultDetailSection__articleContainer {
+        display: flex;
+        flex-direction: column;
+
+        width: 33.1rem;
+        padding: 3.455rem 0 3.455rem 0;
+
+        gap: 3.2rem;
+    }
+
+    .recommendationSection {
+        padding: 5rem 3.9rem;
+    }
+
+    .recommendationSection__articleContainer {
+        display: flex;
+        flex-direction: row;
+
+        align-items: center;
+
+        gap: 4rem;
+    }
+
+    .recommendationSection__articleContainer svg {
+        min-height: 6.4rem;
+        min-width: 6.4rem;
+    }
+
+    .limitationSection {
+        grid-template-columns: repeat(4, 1fr);
+
+        grid-template-rows: repeat(4, auto);
+
+        grid-template-areas:
+            'intro intro intro intro'
+            'gender gender age age'
+            'muscle muscle pregnancy pregnancy'
+            '. race race .'
+        ;
+
+        padding: 9.6rem 4.3rem 9.5rem 3.9rem;
+
+        gap: 2.4rem 1.6rem;
+    }
+
+    .gender,
+    .age,
+    .muscle,
+    .pregnancy,
+    .race {
+        padding: 3.2rem;
+    }
+
+
+}
