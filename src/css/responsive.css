@@ -147,17 +147,17 @@
 
 
 
-@media (min-width: 64rem){
+@media (min-width: 64rem) {
 
-    .calculatorSection__text{
+    .calculatorSection__text {
         width: 68.6rem;
     }
 
-        .resultDetailSection {
+    .resultDetailSection {
         display: flex;
         flex-direction: row;
 
-            justify-content: center;
+        justify-content: center;
         align-items: center;
 
         gap: 7.2rem;
@@ -172,5 +172,192 @@
 
     .limitationSection {
         padding: 10.4rem 14.4rem;
+    }
+}
+
+
+
+
+@media (min-width: 90rem) {
+    .gradient {
+        height: 73.7rem;
+        width: 100.2rem;
+
+        border-radius: 0 0 3.5rem 3.5rem;
+    }
+
+    .calculatorSection svg {
+        width: 6.4rem;
+        height: 6.4rem;
+    }
+
+    .calculatorSection {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        height: 73.7rem;
+
+        gap: 3.2rem;
+
+        position: relative;
+
+        padding: 8.8rem 14.4rem;
+    }
+
+    .calculatorSection__Container {
+        display: flex;
+        flex-direction: row;
+
+        gap: 3.2rem;
+    }
+
+    .calculatorSection__titleContainer {
+        display: flex;
+        flex-direction: column;
+
+        width: 56.4rem;
+
+        gap: 2.4rem;
+
+        margin-top: 7.2rem;
+    }
+
+    .calculatorSection__title {
+        max-width: 44rem;
+
+        text-align: left;
+
+        font-size: var(--text-preset-1-font-size);
+        font-weight: var(--text-preset-1-font-weight);
+        line-height: var(--text-preset-1-line-height);
+        letter-spacing: var(--text-preset-1-letter-spacing);
+    }
+
+    .calculatorSection__text {
+        max-width: 46.5rem;
+
+        text-align: left;
+    }
+
+    .calculatorSection__calculationContanier {
+        width: 56.4rem;
+    }
+
+    .inputsContainer__input {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        width: 23.8rem;
+    }
+
+    .inputsContainer__input input {
+        width: 13.1rem;
+    }
+
+    .resultContainer__textContainer {
+        min-width: 20.6rem;
+    }
+
+
+    .resultDetailSection {
+        background: url('../images/pattern-curved-line-left.svg') no-repeat;
+        background-position: top right 17rem;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        gap: 13.1rem;
+
+        padding: 5.2rem 13.6rem 8.6rem 14.4rem;
+    }
+
+    img {
+        width: 56.4rem;
+        height: 53.3rem;
+    }
+
+    .resultDetailSection__articleContainer {
+        display: flex;
+        flex-direction: column;
+
+        width: 46.5rem;
+        padding: 0;
+
+        gap: 3.2rem;
+    }
+
+    .resultDetailSection__articleContainer__title {
+        font-size: var(--text-preset-2-font-size);
+        font-weight: var(--text-preset-2-font-weight);
+        line-height: var(--text-preset-2-line-height);
+        letter-spacing: var(--text-preset-2-letter-spacing);
+
+        margin-top: 15rem;
+    }
+
+    .resultDetailSection__articleContainer__text {
+        min-width: 46.5rem;
+    }
+
+    .recommendationSection {
+        flex-direction: row;
+
+        padding: 9.6rem 12.8rem;
+
+        gap: 3.2rem;
+    }
+
+    .recommendationSection__articleContainer {
+        display: flex;
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 4.8rem;
+    }
+
+    .recommendationSection__articleContainer__textContainer__text {
+        max-width: 36.5rem;
+    }
+
+    .limitationSection {
+
+        width: 144rem;
+        
+        grid-template-columns: repeat(6, 1fr);
+
+        grid-template-rows: auto;
+
+        grid-template-areas:
+            'intro intro intro . gender gender'
+            '. . age age muscle muscle'
+            '. pregnancy pregnancy race race .'
+        ;
+
+        padding: 10.4rem 14.4rem;
+
+        gap: 2.4rem 1.6rem;
+    }
+
+    .gender,
+    .age,
+    .muscle,
+    .pregnancy,
+    .race {
+        width: 36.5rem;
+    }
+
+    .intro__title {
+        text-align: left;
+    }
+
+    .intro__text {
+        text-align: left;
+
+        max-width: 56.4rem;
     }
 }

@@ -97,6 +97,13 @@ main {
     padding: 3.2rem 2.4rem 6.4rem 2.4rem;
 }
 
+.calculatorSection__Container{
+    display: flex;
+    flex-direction: column;
+
+    gap: 3.2rem;
+}
+
 .calculatorSection svg {
     width: 3.672rem;
     height: 3.672rem;
