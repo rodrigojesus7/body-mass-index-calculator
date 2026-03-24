@@ -7,21 +7,24 @@ let welcomeInstructionText = document.querySelector('.resultContainer__welcomeIn
 let resultText = document.querySelector('.resultContainer__text')
 let resultDetail = document.querySelector('.resultContainer__detailText')
 let bmiDescription = document.querySelector('.resultDetailSection__articleContainer__text')
+let bmiLimits = document.querySelector('.resultContainer__detailText')
+let minBmi = 0
+let maxBmi = 0
 
 input.forEach(input => {
     input.addEventListener('input', function () {
 
         if (height.value != "" && weight.value != "") {
 
-            let metricHight = height.value / 100
+            let metricHeight = height.value / 100
 
-            result = weight.value / (metricHight * metricHight)
+            result = weight.value / (metricHeight * metricHeight)
 
             let fixedResult = result.toFixed(1)
 
             bmi.textContent = fixedResult
 
-            setBmiDescription(fixedResult)
+            setBmiDescription(fixedResult, metricHeight)
 
             welcomeText.classList.add('hidden')
             welcomeInstructionText.classList.add('hidden')
@@ -45,16 +48,30 @@ input.forEach(input => {
 });
 
 
-function setBmiDescription(fixedResult) {
+function setBmiDescription(fixedResult, metricHeight) {
+
+    minBmi = 18.5 * (metricHeight * metricHeight)
+    maxBmi = 24.9 * (metricHeight * metricHeight)
 
     if (fixedResult < 18.5) {
         bmiDescription.textContent = `A BMI of 18.4 or below is classed as underweight. This suggests you could benefit from gaining weight. Working towards a healthier weight range could strengthen your immune system and help prevent bone fractures.`
+
+        bmiLimits.textContent = `Your BMI suggests you’re underweight. Your ideal weight is between ${minBmi.toFixed(1)}kgs - ${maxBmi.toFixed(1)}kgs.`
+
     } else if (fixedResult < 25) {
         bmiDescription.textContent = `A BMI range of 18.5 to 24.9 is considered a 'healthy weight.' Maintaining a healthy weight may lower your chances of experiencing health issues later on, such as obesity and type 2 diabetes. Aim for a nutritious diet with reduced fat and sugar content, incorporating ample fruits and vegetables. Additionally, strive for regular physical activity, ideally about 30 minutes daily for five days a week.`
+
+        bmiLimits.textContent = `Your BMI suggests you’re a healthy weight. Your ideal weight is between ${minBmi.toFixed(1)}kgs - ${maxBmi.toFixed(1)}kgs.`
+
     } else if (fixedResult < 30) {
         bmiDescription.textContent = `A BMI between 25 and 29.9 is classed as overweight. An overweight result suggests you could benefit from making some healthy changes. If you want to lose some weight, working towards a healthier weight range could reduce the risk of long-term conditions such as type 2 diabetes and heart disease.`
+
+        bmiLimits.textContent = `Your BMI suggests you’re overweight. Your ideal weight is between ${minBmi.toFixed(1)}kgs - ${maxBmi.toFixed(1)}kgs.`
+
     } else {
         bmiDescription.textContent = `A BMI of 30 or more is classed as obese. An obese result suggests you are carrying too much weight and you would benefit from making some healthy changes. If you want to lose some weight, slowly working towards a healthier weight range could reduce the risk of long-term conditions such as type 2 diabetes and heart disease.`
+
+        bmiLimits.textContent = `Your BMI suggests you’re obese. Your ideal weight is between ${minBmi.toFixed(1)}kgs - ${maxBmi.toFixed(1)}kgs.`
     }
 
 }
