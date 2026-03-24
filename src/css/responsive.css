@@ -40,6 +40,10 @@
         align-items: center;
     }
 
+    .inputsContainer__input input {
+        width: 80%;
+    }
+
     .calculationContainer__radioContainer {
         padding-right: 18.9rem;
     }
