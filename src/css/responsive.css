@@ -267,7 +267,7 @@
 
     .resultDetailSection {
         background: url('../images/pattern-curved-line-left.svg') no-repeat;
-        background-position: top right 17rem;
+        background-position: 87.5% 0%;
 
         display: flex;
         flex-direction: row;
@@ -346,7 +346,9 @@
     }
 
     .limitationContainer{
-        background-color: url('');
+        background: url('../images/pattern-curved-line-right.svg') no-repeat;
+        background-position: 23% 44%;
+
         align-self: center;
 
     }
