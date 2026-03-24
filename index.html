@@ -14,9 +14,9 @@
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="./src/css/reset.css?v=1.6">
-    <link rel="stylesheet" href="./src/css/style.css?v=1.6">
-    <link rel="stylesheet" href="./src/css/responsive.css?v=1.6">
+    <link rel="stylesheet" href="./src/css/reset.css?v=1.7">
+    <link rel="stylesheet" href="./src/css/style.css?v=1.7">
+    <link rel="stylesheet" href="./src/css/responsive.css?v=1.7">
 
 </head>
 
@@ -69,22 +69,40 @@
                             </div>
                         </div>
 
-                        <div class="calculationContainer__inputsContainer">
-                            <div class="inputsContainer__container">
+                        <div class="calculationContainer__inputsContainer displayCmKg">
+                            <div class="inputsContainer">
                                 <label class="inputsContainer__label" for="height">Height</label>
-                                <div class="inputsContainer__input">
-                                    <input class="input height" type="number" placeholder="0" id="height">
-                                    <p class="inputsContainer__data">cm</p>
+                                <div class="inputsContainer__container">
+                                    <div class="inputsContainer__input">
+                                        <input class="input height" type="number" placeholder="0" id="height">
+                                        <input class="input foot hidden" type="number" placeholder="0" id="foot">
+                                        <p class="inputsContainer__data centimeterText">cm</p>
+                                        <p class="inputsContainer__data footText hidden">ft</p>
+                                    </div>
+                                    <div class="inputsContainer__input inchesContainer hidden">
+                                        <input class="input inches" type="number" placeholder="0" id="inches">
+                                        <p class="inputsContainer__data inchesText">in</p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="inputsContainer">
+                                <label class="inputsContainer__label" for="weight">Weight</label>
+                                <div class="inputsContainer__container">
+                                    <div class="inputsContainer__input">
+                                        <input class="input weight" type="number" placeholder="0" id="weight">
+                                        <input class="input stone hidden" type="number" placeholder="0" id="stone">
+                                        <p class="inputsContainer__data kilogramText">kg</p>
+                                        <p class="inputsContainer__data stoneText hidden">st</p>
+                                    </div>
+                                    <div class="inputsContainer__input poundsContainer hidden">
+                                        <input class="input weight" type="number" placeholder="0" id="pounds">
+                                        <p class="inputsContainer__data poundsText">lbs</p>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="inputsContainer__container">
-                                <label class="inputsContainer__label" for="weight">Weight</label>
-                                <div class="inputsContainer__input">
-                                    <input class="input weight" type="number" placeholder="0" id="weight">
-                                    <p class="inputsContainer__data">kg</p>
-                                </div>
-                            </div>
                         </div>
 
                         <div class="calculationContanier__resultContainer">

@@ -14,6 +14,19 @@ let metricInput = document.querySelector('#metric')
 let imperialInput = document.querySelector('#imperial')
 let radioInputsCheckedCircle = document.querySelectorAll('.radioInputCheckedCircle')
 let radioInputBackground = document.querySelectorAll('.radioInput')
+let centimeterText = document.querySelector('.centimeterText')
+let kilogramText = document.querySelector('.kilogramText')
+let stoneText = document.querySelector('.stoneText')
+let poundsText = document.querySelector('.poundsText')
+let footText = document.querySelector('.footText')
+let inchesText = document.querySelector('.inchesText')
+let footInput = document.querySelector('#foot')
+let inchesInput = document.querySelector('#inches')
+let stoneInput = document.querySelector('#stone')
+let poundsInput = document.querySelector('#pounds')
+let inchesContainer = document.querySelector('.inchesContainer')
+let poundsContainer = document.querySelector('.poundsContainer')
+let metricsContainer = document.querySelector('.calculationContainer__inputsContainer')
 
 
 metricInput.addEventListener('input', function () {
@@ -23,9 +36,53 @@ metricInput.addEventListener('input', function () {
 
         radioInputsCheckedCircle[1].classList.remove('radioInputChecked')
         radioInputBackground[1].classList.remove('radioInput--checked')
+
+        kilogramText.classList.remove('hidden')
+        centimeterText.classList.remove('hidden')
+
+        height.classList.remove('hidden')
+        weight.classList.remove('hidden')
+
+        stoneText.classList.add('hidden')
+        poundsText.classList.add('hidden')
+        footText.classList.add('hidden')
+        inchesText.classList.add('hidden')
+
+        footInput.classList.add('hidden')
+        inchesInput.classList.add('hidden')
+        stoneInput.classList.add('hidden')
+        poundsInput.classList.add('hidden')
+
+        inchesContainer.classList.add('hidden')
+        poundsContainer.classList.add('hidden')
+
+        metricsContainer.classList.add('displayCmKg')
+
+
     } else {
         radioInputsCheckedCircle[0].classList.remove('radioInputChecked')
         radioInputsCheckedCircle[0].classList.remove('radioInput--checked')
+
+        kilogramText.classList.add('hidden')
+        centimeterText.classList.add('hidden')
+
+        height.classList.add('hidden')
+        weight.classList.add('hidden')
+
+        stoneText.classList.remove('hidden')
+        poundsText.classList.remove('hidden')
+        footText.classList.remove('hidden')
+        inchesText.classList.remove('hidden')
+
+        footInput.classList.remove('hidden')
+        inchesInput.classList.remove('hidden')
+        stoneInput.classList.remove('hidden')
+        poundsInput.classList.remove('hidden')
+
+        inchesContainer.classList.remove('hidden')
+        poundsContainer.classList.remove('hidden')
+
+        metricsContainer.classList.remove('displayCmKg')
     }
 })
 
@@ -36,9 +93,52 @@ imperialInput.addEventListener('input', function () {
 
         radioInputsCheckedCircle[0].classList.remove('radioInputChecked')
         radioInputBackground[0].classList.remove('radioInput--checked')
+
+        kilogramText.classList.add('hidden')
+        centimeterText.classList.add('hidden')
+
+        height.classList.add('hidden')
+        weight.classList.add('hidden')
+
+        stoneText.classList.remove('hidden')
+        poundsText.classList.remove('hidden')
+        footText.classList.remove('hidden')
+        inchesText.classList.remove('hidden')
+
+        footInput.classList.remove('hidden')
+        inchesInput.classList.remove('hidden')
+        stoneInput.classList.remove('hidden')
+        poundsInput.classList.remove('hidden')
+
+        inchesContainer.classList.remove('hidden')
+        poundsContainer.classList.remove('hidden')
+
+        metricsContainer.classList.remove('displayCmKg')
+
     } else {
         radioInputsCheckedCircle[1].classList.remove('radioInputChecked')
         radioInputBackground[1].classList.remove('radioInput--checked')
+
+        kilogramText.classList.remove('hidden')
+        centimeterText.classList.remove('hidden')
+
+        height.classList.remove('hidden')
+        weight.classList.remove('hidden')
+
+        stoneText.classList.add('hidden')
+        poundsText.classList.add('hidden')
+        footText.classList.add('hidden')
+        inchesText.classList.add('hidden')
+
+        footInput.classList.add('hidden')
+        inchesInput.classList.add('hidden')
+        stoneInput.classList.add('hidden')
+        poundsInput.classList.add('hidden')
+
+        inchesContainer.classList.add('hidden')
+        poundsContainer.classList.add('hidden')
+
+        metricsContainer.classList.add('displayCmKg')
     }
 })
 
