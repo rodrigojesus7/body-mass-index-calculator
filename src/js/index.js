@@ -10,39 +10,77 @@ let bmiDescription = document.querySelector('.resultDetailSection__articleContai
 let bmiLimits = document.querySelector('.resultContainer__detailText')
 let minBmi = 0
 let maxBmi = 0
+let metricInput = document.querySelector('#metric')
+let imperialInput = document.querySelector('#imperial')
+let radioInputsCheckedCircle = document.querySelectorAll('.radioInputCheckedCircle')
+let radioInputBackground = document.querySelectorAll('.radioInput')
+
+
+metricInput.addEventListener('input', function () {
+    if (metricInput.checked) {
+        radioInputsCheckedCircle[0].classList.add('radioInputChecked')
+        radioInputBackground[0].classList.add('radioInput--checked')
+
+        radioInputsCheckedCircle[1].classList.remove('radioInputChecked')
+        radioInputBackground[1].classList.remove('radioInput--checked')
+    } else {
+        radioInputsCheckedCircle[0].classList.remove('radioInputChecked')
+        radioInputsCheckedCircle[0].classList.remove('radioInput--checked')
+    }
+})
+
+imperialInput.addEventListener('input', function () {
+    if (imperialInput.checked) {
+        radioInputsCheckedCircle[1].classList.add('radioInputChecked')
+        radioInputBackground[1].classList.add('radioInput--checked')
+
+        radioInputsCheckedCircle[0].classList.remove('radioInputChecked')
+        radioInputBackground[0].classList.remove('radioInput--checked')
+    } else {
+        radioInputsCheckedCircle[1].classList.remove('radioInputChecked')
+        radioInputBackground[1].classList.remove('radioInput--checked')
+    }
+})
+
+
+
 
 input.forEach(input => {
     input.addEventListener('input', function () {
 
-        if (height.value != "" && weight.value != "") {
+        if (metricInput.checked) {
+            if (height.value != "" && weight.value != "") {
 
-            let metricHeight = height.value / 100
+                let metricHeight = height.value / 100
 
-            result = weight.value / (metricHeight * metricHeight)
+                result = weight.value / (metricHeight * metricHeight)
 
-            let fixedResult = result.toFixed(1)
+                let fixedResult = result.toFixed(1)
 
-            bmi.textContent = fixedResult
+                bmi.textContent = fixedResult
 
-            setBmiDescription(fixedResult, metricHeight)
+                setBmiDescription(fixedResult, metricHeight)
 
-            welcomeText.classList.add('hidden')
-            welcomeInstructionText.classList.add('hidden')
+                welcomeText.classList.add('hidden')
+                welcomeInstructionText.classList.add('hidden')
 
-            resultText.classList.remove('hidden')
-            resultDetail.classList.remove('hidden')
-            bmi.classList.remove('hidden')
+                resultText.classList.remove('hidden')
+                resultDetail.classList.remove('hidden')
+                bmi.classList.remove('hidden')
 
-        } else {
-            welcomeText.classList.remove('hidden')
-            welcomeInstructionText.classList.remove('hidden')
+            } else {
+                welcomeText.classList.remove('hidden')
+                welcomeInstructionText.classList.remove('hidden')
 
-            resultText.classList.add('hidden')
-            resultDetail.classList.add('hidden')
-            bmi.classList.add('hidden')
+                resultText.classList.add('hidden')
+                resultDetail.classList.add('hidden')
+                bmi.classList.add('hidden')
 
-            bmiDescription.textContent = `A Body Mass Index (BMI) result is a screening tool based on height and weight that categorizes body fat into four ranges: Underweight (<18.5), Healthy Weight (18.5–24.9), Overweight (25.0–29.9), and Obese (30.0+). It estimates potential health risks; however, it does not distinguish between muscle and fat, meaning it may not be accurate for athletes or individuals with high muscle mass.`
+                bmiDescription.textContent = `A Body Mass Index (BMI) result is a screening tool based on height and weight that categorizes body fat into four ranges: Underweight (<18.5), Healthy Weight (18.5–24.9), Overweight (25.0–29.9), and Obese (30.0+). It estimates potential health risks; however, it does not distinguish between muscle and fat, meaning it may not be accurate for athletes or individuals with high muscle mass.`
+            }
         }
+
+
 
     })
 });

@@ -57,6 +57,7 @@
     --unity-text-color: #253347;
 
     --radio-background-color: #E1E7FE;
+    --radio-checked-border-color: #D8E2E7;
     --highlight-color: #345FF6;
 
     --eating-background-color: #FCDDED;
@@ -175,6 +176,43 @@ main {
     padding-right: 1.8rem;
 }
 
+.radioInputContainer{
+    display: flex;
+    align-items: center;
+}
+
+.radioInput{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 3.1rem;
+    height: 3.1rem;
+
+    border: solid 0.1rem var(--input-border-color);
+    border-radius: 50%;
+}
+
+input[type="radio"]{
+    appearance: none;
+}
+
+.radioInput--checked{
+    background-color: var(--radio-background-color);
+    border: solid 0.1rem var(--radio-checked-border-color);
+
+}
+
+
+.radioInputChecked{
+    width: 1.5rem;
+    height: 1.5rem;
+
+    background-color: var(--highlight-color);
+
+    border-radius: 50%;
+}
+
 .calculationContainer__radioLabel {
     font-size: var(--text-preset-6-font-size);
     font-weight: var(--text-preset-6-font-weight-semibold);
@@ -211,6 +249,8 @@ main {
     border-radius: 1.2rem;
 
     cursor: pointer;
+
+    transition: ease-in-out 0.2s;
 }
 
 .inputsContainer__input:hover{
@@ -226,6 +266,22 @@ main {
     outline: none;
     height: 7.7rem;
     width: 17.3rem;
+}
+
+.radioLabel{
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+.radioLabel:hover .radioInput{
+    border: solid 0.1rem var(--highlight-color);
+    transition: ease-in-out 0.2s;
+}
+
+.radioInput:focus-visible{
+    outline: solid 0.1rem var(--highlight-color);
 }
 
 
@@ -432,7 +488,7 @@ img {
     display: grid;
 
     min-width: 100%;
-    
+
     grid-template-columns: 1fr;
 
     grid-template-rows: repeat(6, auto);
