@@ -23,10 +23,14 @@
 
     .calculationContainer__inputsContainer {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
 
         justify-content: space-between;
 
+        gap: 3.2rem;
+    }
+
+    .inputsContainer__container{
         gap: 2.4rem;
     }
 
@@ -34,12 +38,6 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-
-        width: 29.9rem;
-    }
-
-    .inputsContainer__input input {
-        width: 19.2rem;
     }
 
     .calculationContainer__radioContainer {
@@ -142,7 +140,13 @@
         padding: 3.2rem;
     }
 
+    .hidden {
+        display: none;
+    }
 
+    .displayCmKg{
+        flex-direction: row;
+    }
 }
 
 
@@ -174,6 +178,14 @@
 
     .limitationSection {
         padding: 10.4rem 14.4rem;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .displayCmKg{
+        flex-direction: row;
     }
 }
 
@@ -217,9 +229,7 @@
         padding: 8.8rem 14.4rem;
     }
 
-    .calculationContainer__inputsContainer{
-        flex-direction: column;
-    }
+
 
     .inputsContainer__container{
         flex-direction: row;
@@ -274,9 +284,6 @@
         width: 23.8rem;
     }
 
-    .inputsContainer__input input {
-        width: 13.1rem;
-    }
 
     .resultContainer__textContainer {
         min-width: 20.6rem;

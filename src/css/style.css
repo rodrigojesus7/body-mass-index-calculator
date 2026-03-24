@@ -109,6 +109,8 @@ main {
 .calculatorSection svg {
     width: 3.672rem;
     height: 3.672rem;
+
+    flex-shrink: 0;
 }
 
 .calculatorSection__titleContainer {
@@ -240,7 +242,7 @@ input[type="radio"] {
 
 .inputsContainer__container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 
     gap: 0.8rem;
 }
@@ -272,7 +274,7 @@ input[type="radio"] {
     border: none;
     outline: none;
     height: 7.7rem;
-    width: 17.3rem;
+    width: 70%;
 }
 
 .radioLabel {
