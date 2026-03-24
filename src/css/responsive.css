@@ -167,6 +167,8 @@
     }
 
     .recommendationSection {
+        justify-content: center;
+
         padding: 5rem 12.8rem;
     }
 
@@ -181,7 +183,7 @@
 @media (min-width: 90rem) {
     .gradient {
         height: 73.7rem;
-        width: 100.2rem;
+        width: 70%;
 
         border-radius: 0 0 3.5rem 3.5rem;
     }
@@ -189,12 +191,14 @@
     .calculatorSection svg {
         width: 6.4rem;
         height: 6.4rem;
+
+        align-self: flex-start;
     }
 
     .calculatorSection {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
 
         height: 73.7rem;
 
@@ -326,14 +330,12 @@
 
     .limitationSection {
 
-        width: 144rem;
-        
         grid-template-columns: repeat(6, 1fr);
 
         grid-template-rows: auto;
 
         grid-template-areas:
-            'intro intro intro . gender gender'
+            'intro intro intro gender gender .'
             '. . age age muscle muscle'
             '. pregnancy pregnancy race race .'
         ;
@@ -341,6 +343,12 @@
         padding: 10.4rem 14.4rem;
 
         gap: 2.4rem 1.6rem;
+    }
+
+    .limitationContainer{
+        background-color: url('');
+        align-self: center;
+
     }
 
     .gender,
@@ -358,6 +366,6 @@
     .intro__text {
         text-align: left;
 
-        max-width: 56.4rem;
+        max-width: 46.4rem;
     }
 }

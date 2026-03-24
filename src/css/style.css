@@ -73,6 +73,7 @@ body {
 main {
     display: flex;
     flex-direction: column;
+
 }
 
 .gradient {
@@ -430,6 +431,8 @@ img {
 .limitationSection {
     display: grid;
 
+    min-width: 100%;
+    
     grid-template-columns: 1fr;
 
     grid-template-rows: repeat(6, auto);
