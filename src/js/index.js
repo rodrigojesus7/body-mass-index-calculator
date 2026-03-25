@@ -27,7 +27,7 @@ let poundsInput = document.querySelector('#pounds')
 let inchesContainer = document.querySelector('.inchesContainer')
 let poundsContainer = document.querySelector('.poundsContainer')
 let metricsContainer = document.querySelector('.calculationContainer__inputsContainer')
-
+let radioLabel = document.querySelectorAll('.radioLabel')
 
 metricInput.addEventListener('input', function () {
     if (metricInput.checked) {
@@ -178,8 +178,45 @@ input.forEach(input => {
 
                 bmiDescription.textContent = `A Body Mass Index (BMI) result is a screening tool based on height and weight that categorizes body fat into four ranges: Underweight (<18.5), Healthy Weight (18.5–24.9), Overweight (25.0–29.9), and Obese (30.0+). It estimates potential health risks; however, it does not distinguish between muscle and fat, meaning it may not be accurate for athletes or individuals with high muscle mass.`
             }
+
         }
 
+        if (imperialInput.checked) {
+
+            if ((footInput.value != "" || inchesInput.value != "") && (stoneInput.value != "" || poundsInput.value != "")) {
+
+                let totalInches = (Number(footInput.value) * 12) + Number(inchesInput.value)
+                let totalPounds = (Number(stoneInput.value) * 14) + Number(poundsInput.value)
+
+                let metricHeight = totalInches * 0.0254
+
+                result = (703 * totalPounds) / (totalInches * totalInches)
+
+                let fixedResult = result.toFixed(1)
+
+                bmi.textContent = fixedResult
+
+                setBmiDescription(fixedResult, metricHeight)
+
+                welcomeText.classList.add('hidden')
+                welcomeInstructionText.classList.add('hidden')
+
+                resultText.classList.remove('hidden')
+                resultDetail.classList.remove('hidden')
+                bmi.classList.remove('hidden')
+
+            } else {
+                welcomeText.classList.remove('hidden')
+                welcomeInstructionText.classList.remove('hidden')
+
+                resultText.classList.add('hidden')
+                resultDetail.classList.add('hidden')
+                bmi.classList.add('hidden')
+
+                bmiDescription.textContent = `A Body Mass Index (BMI) result is a screening tool based on height and weight that categorizes body fat into four ranges: Underweight (<18.5), Healthy Weight (18.5–24.9), Overweight (25.0–29.9), and Obese (30.0+). It estimates potential health risks; however, it does not distinguish between muscle and fat, meaning it may not be accurate for athletes or individuals with high muscle mass.`
+            }
+
+        }
 
 
     })
@@ -213,5 +250,22 @@ function setBmiDescription(fixedResult, metricHeight) {
     }
 
 }
+
+radioInputBackground.forEach(radio => {
+
+    radio.addEventListener('keydown', e => {
+
+      if (e.key === 'Enter' || e.code === 'Space' || e.key === ' ') {
+
+        e.preventDefault()
+
+        radio.previousElementSibling.checked = true
+        
+        radio.previousElementSibling.dispatchEvent(new Event('input'))
+
+      }
+    })
+  })
+
 
 
