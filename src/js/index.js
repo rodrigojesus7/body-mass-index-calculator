@@ -153,7 +153,7 @@ input.forEach(input => {
 
                 let metricHeight = height.value / 100
 
-                result = weight.value / (metricHeight * metricHeight)
+                let result = weight.value / (metricHeight * metricHeight)
 
                 let fixedResult = result.toFixed(1)
 
@@ -190,7 +190,7 @@ input.forEach(input => {
 
                 let metricHeight = totalInches * 0.0254
 
-                result = (703 * totalPounds) / (totalInches * totalInches)
+                let result = (703 * totalPounds) / (totalInches * totalInches)
 
                 let fixedResult = result.toFixed(1)
 
